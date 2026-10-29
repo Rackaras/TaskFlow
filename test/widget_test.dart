@@ -10,7 +10,7 @@ void main() {
 
     expect(find.text('TaskFlow'), findsWidgets);
     expect(find.text('Quinto "B"'), findsOneWidget);
-    expect(find.textContaining('Raul'), findsOneWidget);
+    expect(find.text('Creador: Raúl Cedeño Mendoza'), findsOneWidget);
     expect(find.text('5'), findsOneWidget);
     expect(find.text('tareas pendientes'), findsOneWidget);
   });

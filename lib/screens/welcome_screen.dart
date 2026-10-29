@@ -8,7 +8,7 @@ class WelcomeScreen extends StatelessWidget {
 
   static const String appName = 'TaskFlow';
   static const String courseName = 'Quinto "B"';
-  static const String studentName = 'Raul';
+  static const String studentName = 'Raúl Cedeño Mendoza';
   static const String welcomeMessage =
       'Organiza tu día, una tarea a la vez. ¡Bienvenido a tu nuevo gestor de tareas!';
   static const int pendingTasks = 5;
@@ -52,7 +52,8 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 32),
                 Text(
-                  'Hola, $studentName',
+                  'Creador: $studentName',
+                  textAlign: TextAlign.center,
                   style: textTheme.titleLarge?.copyWith(
                     color: AppColors.textPrimary,
                     fontWeight: FontWeight.w600,
