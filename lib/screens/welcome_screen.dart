@@ -7,7 +7,7 @@ class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
 
   static const String appName = 'TaskFlow';
-  static const String courseName = 'Curso Flutter';
+  static const String courseName = 'Quinto "B"';
   static const String studentName = 'Raul';
   static const String welcomeMessage =
       'Organiza tu día, una tarea a la vez. ¡Bienvenido a tu nuevo gestor de tareas!';
@@ -18,10 +18,7 @@ class WelcomeScreen extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(appName),
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: const Text(appName), centerTitle: true),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -32,7 +29,11 @@ class WelcomeScreen extends StatelessWidget {
                 const CircleAvatar(
                   radius: 44,
                   backgroundColor: AppColors.secondary,
-                  child: Icon(Icons.task_alt, size: 48, color: Colors.white),
+                  child: Icon(
+                    Icons.task_alt,
+                    size: 48,
+                    color: AppColors.primary,
+                  ),
                 ),
                 const SizedBox(height: 24),
                 Text(
@@ -51,7 +52,7 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 32),
                 Text(
-                  'Hola, $studentName 👋',
+                  'Hola, $studentName',
                   style: textTheme.titleLarge?.copyWith(
                     color: AppColors.textPrimary,
                     fontWeight: FontWeight.w600,
@@ -90,22 +91,25 @@ class _PendingTasksCard extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
       decoration: BoxDecoration(
-        color: AppColors.primary,
+        color: AppColors.card,
         borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: AppColors.accent, width: 2),
       ),
       child: Column(
         children: [
           Text(
             '$count',
             style: textTheme.displayMedium?.copyWith(
-              color: AppColors.accent,
+              color: AppColors.primary,
               fontWeight: FontWeight.bold,
             ),
           ),
           const SizedBox(height: 4),
           Text(
             'tareas pendientes',
-            style: textTheme.titleMedium?.copyWith(color: Colors.white),
+            style: textTheme.titleMedium?.copyWith(
+              color: AppColors.textPrimary,
+            ),
           ),
         ],
       ),
